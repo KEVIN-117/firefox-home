@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="app.css" />
+
+</head>
+
+<body class="darktheme">
+    <!-- Animated background elements -->
+    <div class="bg-animation">
+        <div class="bg-gradient-1"></div>
+        <div class="bg-gradient-2"></div>
+        <div class="bg-gradient-3"></div>
+    </div>
+
+    <button id="themeButton">
+        <i id="themeIcon" icon-name="moon"></i>
+    </button>
+
+    <div class="container">
+        <!-- Clock and Greetings -->
+        <div class="card timeBlock glass-card space-y-8">
+            <div class="card-glow"></div>
+            <div class="clock">
+                <div id="time"></div>
+                <div class="date">
+                    <div id="date"></div>
+                </div>
+                <div class="weather flex items-center justify-center space-x-4 mt-4">
+                    <div class="weatherIcon">
+                        <i icon-name="cloud-moon" class="weather-icon-svg"></i>
+                    </div>
+                    <div class="weatherValue">
+                        <p> °<span class="g">C</span></p>
+                    </div>
+                    <div class="weatherDescription">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div id="greetings"></div>
+        </div>
+
+        <!-- Date and Weather -->
+        <div class="card weatherBlock glass-card">
+            <div class="card-glow"></div>
+
+
+        </div>
+
+        <!-- Links Block -->
+        <div class="linksBlock" id="linksBlock">
+            <!-- First Card -->
+            <div class="card links-card glass-card flex flex-col justify-between" id="list_1">
+                <div class="card-header flex items-center justify-between rounded-t-lg">
+                    <h3 id="list_1_title"></h3>
+                    <div>
+                        <i id="list_1_icon" class="card-icon"></i>
+                    </div>
+                </div>
+                <div id="list_1_links_container" class="card-body divider-y divide-indigo-500">
+                    <div class="category_title">
+                        <h6 id="link_1_category" class="flex w-full justify-evenly items-center text-sm mb-2">
+                        </h6>
+                        <p id="link_1_description"></p>
+                    </div>
+                    <div id="list_1_links" class="links-list"></div>
+
+                </div>
+                <div id="actions" class="card-footer">
+                    <button id="prevButton">
+                        <i icon-name="chevron-left" class="card-icon"></i>
+                    </button>
+                    <button id="nextButton">
+                        <i icon-name="chevron-right" class="card-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="card links-card glass-card flex flex-col justify-between" id="list_2">
+                <div class="card-header flex items-center justify-between rounded-t-lg">
+                    <h3 id="list_2_title"></h3>
+                    <div>
+                        <i id="list_2_icon" class="card-icon"></i>
+                    </div>
+                </div>
+                <div id="list_2_links_container" class="card-body divider-y divide-indigo-500">
+                    <div class="category_title">
+                        <h6 id="link_2_category" class="flex w-full justify-evenly items-center text-sm mb-2">
+                        </h6>
+                        <p id="link_2_description" class="truncate"></p>
+                    </div>
+                    <div id="list_2_links" class="links-list"></div>
+
+                </div>
+                <div id="actions" class="card-footer">
+                    <button id="prevButton">
+                        <i icon-name="chevron-left" class="card-icon"></i>
+                    </button>
+                    <button id="nextButton">
+                        <i icon-name="chevron-right" class="card-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="card links-card glass-card flex flex-col justify-between" id="list_3">
+                <div class="card-header flex items-center justify-between rounded-t-lg">
+                    <h3 id="list_3_title"></h3>
+                    <div>
+                        <i id="list_3_icon" class="card-icon"></i>
+                    </div>
+                </div>
+                <div id="list_3_links_container" class="card-body divider-y divide-indigo-500">
+                    <div class="category_title">
+                        <h6 id="link_3_category" class="flex w-full justify-evenly items-center text-sm mb-2">
+                        </h6>
+                        <p id="link_3_description"></p>
+                    </div>
+                    <div id="list_3_links" class="links-list"></div>
+
+                </div>
+                <div id="actions" class="card-footer">
+                    <button id="prevButton">
+                        <i icon-name="chevron-left" class="card-icon"></i>
+                    </button>
+                    <button id="nextButton">
+                        <i icon-name="chevron-right" class="card-icon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fourth Card programming languages -->
+            <div class="card links-card glass-card flex flex-col justify-between" id="list_4">
+                <div class="card-header">
+                    <i icon-name="code-2" class="card-icon"></i>
+                </div>
+                <div id="list_4_links" class="links-list"></div>
+                <div id="actions" class="flex items-center justify-between mt-4">
+                    <button id="prevButton">
+                        <i icon-name="chevron-left" class="card-icon"></i>
+                    </button>
+                    <button id="nextButton">
+                        <i icon-name="chevron-right" class="card-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Config  -->
+    <script src="config.js"></script>
+
+    <!-- Scripts  -->
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/time.js"></script>
+    <script src="assets/js/greeting.js"></script>
+    <script src="assets/js/weather.js"></script>
+
+    <!-- Generators  -->
+    <script src="assets/js/lists.js"></script>
+    <script src="assets/js/buttons.js"></script>
+
+    <script>
+        lucide.createIcons();
+
+        // Theme toggle
+        const themeButton = document.getElementById('themeButton');
+        themeButton.addEventListener('click', () => {
+            document.body.classList.toggle('darktheme');
+        });
+    </script>
+</body>
+
+</html>
